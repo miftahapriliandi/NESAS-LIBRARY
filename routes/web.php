@@ -24,8 +24,8 @@ Route::prefix('admin')
 ->middleware(['auth', 'role'])
 ->group(function() {
     
-    Route::get('/', 'AdminController@index')->name('dashboard'); 
-    
+    Route::get('/', 'AdminController@index')->name('dashboard');
+    Route::resource('book', 'BookController');    
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -18,7 +18,6 @@ class CreateBooksTable extends Migration
 
             $table->string('book_code')->unique();
             $table->string('name');
-            $table->longText('description');
             $table->string('cover');
             $table->foreignId('author_id'); //pengarang
             $table->foreignId('publisher_id'); //penerbit

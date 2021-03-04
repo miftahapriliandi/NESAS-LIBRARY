@@ -8,20 +8,21 @@
       </div>
       <ul class="sidebar-menu">
           <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            <a href="{{ url('admin') }}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fas fa-columns"></i> <span>Buku</span></a>
+            <a href="{{ route('book.index') }}" class="nav-link"><i class="fas fa-columns"></i> <span>Buku</span></a>
           </li>
           <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-square"></i> <span>Siswa</span></a></li>
           <li class="nav-item">
             <a href="#" class="nav-link"><i class="fas fa-th"></i> <span>Peminjaman</span></a>
           </li>
-        <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+        <div class="mt-4 mb-4 p-3">
           <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf
-            <button class="btn btn-danger btn-sm btn-block" style="margin-top: 260px" type="submit">
-              <i class="fas fa-sign-out-alt"></i> Logout
+            <button class="btn btn-danger btn-sm btn-block" style="margin-top: 230px" type="submit">
+              <i class="fas fa-sign-out-alt"></i> 
+              <span class="hide-sidebar-mini">Logout</span> 
             </button>
           </form>
         </div>
